@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .weather-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        canvas {
+            max-width: 100%;
+        }
+        .weather-info {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .icon {
+            width: 50px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Weather Forecast</h1>
+
+    <!-- Today's and Tomorrow's Weather -->
+    <div class="weather-container">
+        <h2>Today's & Tomorrow's Weather</h2>
+        <div id="today-weather" class="weather-info">Loading...</div>
+        <div id="tomorrow-weather" class="weather-info"></div>
+    </div>
+
+    <!-- Weather Forecast Chart -->
+    <div class="weather-container">
+        <canvas id="weatherChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
