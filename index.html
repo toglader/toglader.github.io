@@ -23,12 +23,15 @@
             max-width: 100%;
         }
         .weather-info {
-            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             font-size: 18px;
+            margin: 10px 0;
         }
-        .icon {
+        .weather-icon {
             width: 50px;
-            vertical-align: middle;
         }
     </style>
 </head>
@@ -46,6 +49,12 @@
     <!-- Weather Forecast Chart -->
     <div class="weather-container">
         <canvas id="weatherChart"></canvas>
+    </div>
+
+    <!-- Hourly Forecast Chart -->
+    <div class="weather-container">
+        <h2>Hourly Forecast</h2>
+        <canvas id="hourlyChart"></canvas>
     </div>
 
     <script src="script.js"></script>
