@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tomorrowWeatherEl.innerHTML = `
             <strong>Tomorrow:</strong> ${getWeatherIcon(weather.weathercode[1])} 
             <br>🌡️ Max: ${weather.temperature_2m_max[1]}°C / Min: ${weather.temperature_2m_min[1]}°C
-            <br>💨 Wind: ${weather.wind_speed_10m_max[1]3.6} m/s
+            <br>💨 Wind: ${weather.wind_speed_10m_max[1]/3.6} m/s
         `;
     }
 
