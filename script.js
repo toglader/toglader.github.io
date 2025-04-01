@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchWeather(lat, lon) {
         try {
             const response = await fetch(
-                `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,weathercode,wind_speed_10m_max,humidity_2m_max&hourly=temperature_2m,wind_speed_10m,relative_humidity_2m,weathercode&timezone=auto`
+                `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,weathercode,wind_speed_10m_max&hourly=temperature_2m,wind_speed_10m,relative_humidity_2m,weathercode&timezone=auto`
             );
             const data = await response.json();
             displayWeatherInfo(data.daily);
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <strong>Today:</strong> ${getWeatherIcon(weather.weathercode[0])} 
             <br>🌡️ Max: ${weather.temperature_2m_max[0]}°C / Min: ${weather.temperature_2m_min[0]}°C
             <br>💨 Wind: ${weather.wind_speed_10m_max[0]} km/h
-            <br>💧 Humidity: ${weather.humidity_2m_max[0]}%
         `;
 
         // Tomorrow's Weather
@@ -42,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <strong>Tomorrow:</strong> ${getWeatherIcon(weather.weathercode[1])} 
             <br>🌡️ Max: ${weather.temperature_2m_max[1]}°C / Min: ${weather.temperature_2m_min[1]}°C
             <br>💨 Wind: ${weather.wind_speed_10m_max[1]} km/h
-            <br>💧 Humidity: ${weather.humidity_2m_max[1]}%
         `;
     }
 
