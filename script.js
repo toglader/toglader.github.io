@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
         todayWeatherEl.innerHTML = `
             <strong>Today:</strong> ${getWeatherIcon(weather.weathercode[0])} 
             <br>🌡️ Max: ${weather.temperature_2m_max[0]}°C / Min: ${weather.temperature_2m_min[0]}°C
-            <br>💨 Wind: ${weather.wind_speed_10m_max[0]} km/h
+            <br>💨 Wind: ${weather.wind_speed_10m_max[0]/3.6} m/s
         `;
 
         // Tomorrow's Weather
         tomorrowWeatherEl.innerHTML = `
             <strong>Tomorrow:</strong> ${getWeatherIcon(weather.weathercode[1])} 
             <br>🌡️ Max: ${weather.temperature_2m_max[1]}°C / Min: ${weather.temperature_2m_min[1]}°C
-            <br>💨 Wind: ${weather.wind_speed_10m_max[1]} km/h
+            <br>💨 Wind: ${weather.wind_speed_10m_max[1]3.6} m/s
         `;
     }
 
